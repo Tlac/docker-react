@@ -6,7 +6,7 @@ before_install:
   - docker build -t tlac/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run tlac/docker-react npm run test -- --coverage
+  - docker run tlac/docker-react npm run test -- --coverage --watch=false
 
 deploy:
   provider: elasticbeanstalk
